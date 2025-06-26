@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sushizen | Restaurante Japonés Premium</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:400,700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#0e0e0e] text-[#f5f5f5] font-sans min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="sticky top-0 z-30 bg-[#0e0e0e]/95 border-b border-[#cfa846] shadow-lg backdrop-blur">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3" style="max-width:1200px;margin:0 auto;padding:1.2rem 2rem; position: relative;">
+    
+    <nav class="flex items-center gap-4 mx-auto">
+      <a href="#menu" id="carta-btn" class="btn4 carta-btn">Carta</a>
+      <a href="#Sobre-nosotros" class="btn4">Sobre nosotros</a>
+      <a href="#promo-slider" class="btn4">Promociones</a>
+      <a href="https://wa.me/..." class="btn4" target="_blank">Reservar mesa</a>
+    </nav>
+
+    <!-- BOTÓN CARRITO -->
+    <button id="carrito-btn" class="cart-btn" aria-label="Abrir carrito">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/shopping-bag.png"
+           alt="Carrito"
+           style="width: 20px; height: 20px; object-fit: contain;" />
+      </button>
+    </div>
+  </header>
+  
+<aside id="items" class="carrito hidden">
+  <h3>Tu pedido</h3>
+  <ul id="carrito" class="list-group">
+    <!-- Productos se renderizan aquí -->
+  </ul>
+  <hr>
+  <p class="text-right">Total: <span id="total">0</span>$</p>
+  <div class="carrito-btns">
+    <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+    <button id="boton-pagar" class="btn btn-success">Pagar</button>
+  </div>
+</aside>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero-banner" style="background-image: url('https://images.unsplash.com/photo-1602273660127-a0000560a4c1?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-position: center left; background-size: cover;">
+    <div class="hero-text">
+      <h2>Sushizen</h2>
+      <p>Viví la experiencia</p>
+      <a href="#reservas" class="hero-button"><span>Reservar mesa</span></a>
+    </div>
+  </section>
+
+  <!-- Hero principal -->
+  <section id="Sobre-nosotros" class="hero-card">
+  <div class="hero-card-content">
+    <img
+      src="https://images.unsplash.com/photo-1512061942530-e6a4e9a5cf27?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      alt="Foto restaurante Sushizen"
+      class="hero-img"
+    />
+    <div class="hero-text">
+      <h2>Sobre nosotros</h2>
+      <p>Inspirado en la elegancia japonesa contemporánea, donde cada detalle importa.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Slider de promociones -->
+<section id="promo-slider">
+  <div class="carousel">
+    
+  <!-- Flechas opcionales -->
+     <button id="promo-prev" class="slider-arrow opacity-0">‹</button>
+  <button id="promo-next" class="slider-arrow opacity-0">›</button>
+</section>
+
+  <!-- Menú principal -->
+  <div id="menu" class="menu-tabs" >
+  <button class="menu-tab" data-categoria="menu">Menú</button>
+  <button class="menu-tab" data-categoria="postres">Postres</button>
+  <button class="menu-tab" data-categoria="bebidas">Bebidas</button>
+</div>
+
+<div id="menu-contenido" class="grid-menu"></div>
+
+  <!-- Footer -->
+  <footer class="w-full bg-[#0e0e0e] border-t border-[#cfa846] py-8 text-center text-[#f5f5f5] text-base font-light mt-12">
+    © 2025 Sushizen. Todos los derechos reservados.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
